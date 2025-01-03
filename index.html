@@ -3,38 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Smartfren</title>
+    <title>Smartfren Employee Database</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-container">
-        <img src="logo.png" alt="Smartfren Logo" class="logo">
-        <h1>Login</h1>
-        <form id="loginForm" onsubmit="return login(event)">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Login</button>
-        </form>
-        <p id="error-message" class="error"></p>
+    <!-- Halaman Login -->
+    <div id="login-page" class="login-container">
+        <div class="login-box">
+            <img src="logo-smartfren.png" alt="Smartfren Logo" class="logo">
+            <h2>Login</h2>
+            <form onsubmit="handleLogin(event)">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Login</button>
+            </form>
+        </div>
     </div>
-    <script src="script.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Smartfren</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="dashboard-container">
+
+    <!-- Halaman Dashboard -->
+    <div id="dashboard-page" class="dashboard-container" style="display: none;">
         <header>
             <h1>Employee Dashboard</h1>
             <button class="add-btn" onclick="showAddModal()">+ Add Data</button>
+            <button class="logout-btn" onclick="logout()">Logout</button>
         </header>
 
         <table>
