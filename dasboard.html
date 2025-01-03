@@ -8,7 +8,11 @@
 </head>
 <body>
     <div class="dashboard-container">
-        <h1>Employee Data</h1>
+        <header>
+            <h1>Employee Dashboard</h1>
+            <button class="add-btn" onclick="showAddModal()">+ Add Data</button>
+        </header>
+
         <table>
             <thead>
                 <tr>
@@ -28,7 +32,7 @@
                 </tr>
             </thead>
             <tbody id="data-table">
-                <!-- Data karyawan diisi di sini -->
+                <!-- Contoh Data -->
                 <tr>
                     <td>Jabo East</td>
                     <td>Delsa Ryanda Adhikara</td>
@@ -50,6 +54,54 @@
             </tbody>
         </table>
     </div>
+
+    <!-- Modal Form Add Data -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="hideAddModal()">&times;</span>
+            <h2>Add New Employee</h2>
+            <form id="addForm" onsubmit="addData(event)">
+                <label for="region">Region:</label>
+                <input type="text" id="region" name="region" required>
+
+                <label for="coordinator">Coordinator Name:</label>
+                <input type="text" id="coordinator" name="coordinator" required>
+
+                <label for="cluster">New Cluster:</label>
+                <input type="text" id="cluster" name="cluster" required>
+
+                <label for="name">Nama PIC:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="status">Status:</label>
+                <input type="text" id="status" name="status" required>
+
+                <label for="nik">NIK:</label>
+                <input type="text" id="nik" name="nik" required>
+
+                <label for="telp1">No. Telp #1:</label>
+                <input type="text" id="telp1" name="telp1" required>
+
+                <label for="telp2">No. Telp #2:</label>
+                <input type="text" id="telp2" name="telp2">
+
+                <label for="ktp">No. KTP:</label>
+                <input type="text" id="ktp" name="ktp" required>
+
+                <label for="position">Position:</label>
+                <input type="text" id="position" name="position" required>
+
+                <label for="date">Date Join:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="sertifikat">Sertifikat WAH:</label>
+                <input type="text" id="sertifikat" name="sertifikat" required>
+
+                <button type="submit">Add Data</button>
+            </form>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
