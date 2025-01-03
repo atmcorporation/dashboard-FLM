@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Smartfren</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Employee Data</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Region</th>
+                    <th>Coordinator Name</th>
+                    <th>New Cluster</th>
+                    <th>Nama PIC</th>
+                    <th>Status</th>
+                    <th>NIK</th>
+                    <th>No. Telp #1</th>
+                    <th>No. Telp #2</th>
+                    <th>No. KTP</th>
+                    <th>Position</th>
+                    <th>Date Join</th>
+                    <th>Sertifikat WAH</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="data-table">
+                <!-- Data karyawan diisi di sini -->
+                <tr>
+                    <td>Jabo East</td>
+                    <td>Delsa Ryanda Adhikara</td>
+                    <td>JBE1 BOGOR3</td>
+                    <td>Abdul Kodir</td>
+                    <td>Active</td>
+                    <td>1326555</td>
+                    <td>0882-2375-8240</td>
+                    <td>0882-2375-8240</td>
+                    <td>3271042202820014</td>
+                    <td>FLM Engineer</td>
+                    <td>10-Jun-24</td>
+                    <td>Done Training</td>
+                    <td>
+                        <button onclick="editData(this)">Edit</button>
+                        <button onclick="deleteData(this)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
