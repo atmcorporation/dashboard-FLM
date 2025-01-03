@@ -22,3 +22,110 @@
     <script src="script.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Smartfren</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Employee Dashboard</h1>
+            <button class="add-btn" onclick="showAddModal()">+ Add Data</button>
+        </header>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Region</th>
+                    <th>Coordinator Name</th>
+                    <th>New Cluster</th>
+                    <th>Nama PIC</th>
+                    <th>Status</th>
+                    <th>NIK</th>
+                    <th>No. Telp #1</th>
+                    <th>No. Telp #2</th>
+                    <th>No. KTP</th>
+                    <th>Position</th>
+                    <th>Date Join</th>
+                    <th>Sertifikat WAH</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="data-table">
+                <!-- Contoh Data -->
+                <tr>
+                    <td>Jabo East</td>
+                    <td>Delsa Ryanda Adhikara</td>
+                    <td>JBE1 BOGOR3</td>
+                    <td>Abdul Kodir</td>
+                    <td>Active</td>
+                    <td>1326555</td>
+                    <td>0882-2375-8240</td>
+                    <td>0882-2375-8240</td>
+                    <td>3271042202820014</td>
+                    <td>FLM Engineer</td>
+                    <td>10-Jun-24</td>
+                    <td>Done Training</td>
+                    <td>
+                        <button onclick="editData(this)">Edit</button>
+                        <button onclick="deleteData(this)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal Form Add Data -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="hideAddModal()">&times;</span>
+            <h2>Add New Employee</h2>
+            <form id="addForm" onsubmit="addData(event)">
+                <label for="region">Region:</label>
+                <input type="text" id="region" name="region" required>
+
+                <label for="coordinator">Coordinator Name:</label>
+                <input type="text" id="coordinator" name="coordinator" required>
+
+                <label for="cluster">New Cluster:</label>
+                <input type="text" id="cluster" name="cluster" required>
+
+                <label for="name">Nama PIC:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="status">Status:</label>
+                <input type="text" id="status" name="status" required>
+
+                <label for="nik">NIK:</label>
+                <input type="text" id="nik" name="nik" required>
+
+                <label for="telp1">No. Telp #1:</label>
+                <input type="text" id="telp1" name="telp1" required>
+
+                <label for="telp2">No. Telp #2:</label>
+                <input type="text" id="telp2" name="telp2">
+
+                <label for="ktp">No. KTP:</label>
+                <input type="text" id="ktp" name="ktp" required>
+
+                <label for="position">Position:</label>
+                <input type="text" id="position" name="position" required>
+
+                <label for="date">Date Join:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="sertifikat">Sertifikat WAH:</label>
+                <input type="text" id="sertifikat" name="sertifikat" required>
+
+                <button type="submit">Add Data</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
